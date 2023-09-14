@@ -48,6 +48,7 @@ const SignIn = () => {
           logInRef.current.reset();
           localStorage.setItem("access-token", res.token);
           dispatch(loginSuccess(res.user));
+          console.log("login user", res);
           navigate("/");
         } catch (error) {
           dispatch(loginFailure("Invalid email or password"));
@@ -86,9 +87,9 @@ const SignIn = () => {
         setSignUpError({ email: "", password: "", userName: "" });
         signUpRef.current.reset();
         localStorage.setItem("access-token", res.token);
-        dispatch(loginSuccess(res.data));
+        dispatch(loginSuccess(res.data.user));
         console.log("res", res);
-        console.log("res.data", res.data)
+        console.log("res.token", res.token)
         navigate("/");
       } catch (error) {
         if (err.response.status === 409) {
