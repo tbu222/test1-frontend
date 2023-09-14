@@ -85,7 +85,9 @@ const SignIn = () => {
         });
         setSignUpError({ email: "", password: "", userName: "" });
         signUpRef.current.reset();
+        localStorage.setItem("access-token", res.token);
         dispatch(loginSuccess(res.user));
+        console.log("res", res.user);
         navigate("/");
       } catch (error) {
         if (err.response.status === 409) {
