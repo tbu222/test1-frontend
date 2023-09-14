@@ -10,7 +10,6 @@ const Search = () => {
   const query = useLocation().search;
 
   useEffect(() => {
-    console.log("search route", query);
     const fetchVideos = async () => {
       try {
         const res = await API.get(`/videos/search${query}`);
@@ -27,7 +26,7 @@ const Search = () => {
       {videos.length > 0 ? (
         videos.map((video) => <Card key={video.id} video={video} />)
       ) : (
-        <h1>No videos found </h1>
+        <h1>There is no video with searched term, try again!</h1>
       )}
     </Container>
   );

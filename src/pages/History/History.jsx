@@ -34,7 +34,7 @@ const History = () => {
       ) : videos.length > 0 ? (
         videos.map((video) => <Card key={video.id} video={video} />)
       ) : (
-        <h1>No videos in your history </h1>
+        <h1>There is currently no video in your history </h1>
       )}
     </Container>
   );

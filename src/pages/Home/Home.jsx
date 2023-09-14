@@ -2,7 +2,7 @@ import { Container } from "./Home.styled.js";
 import Card from "../../components/Card";
 import { useState, useEffect } from "react";
 import API from "../../api/api.js";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Home = ({ type }) => {
@@ -27,7 +27,6 @@ const Home = ({ type }) => {
 
       try {
         const res = await API.get(url);
-        console.log(res.data);
         setVideos(res.data.videos);
       } catch (error) {
         console.log(error.message);
@@ -42,13 +41,13 @@ const Home = ({ type }) => {
       {videos && videos.map((video) => <Card key={video._id} video={video} />)}
       {type === "library" && (videos?.length === 0 || !videos) && (
         <div>
-          <h1>You have no Saved videos in your library</h1>
-          <p> Go to your library and add some videos</p>
+          <h1>There is currently no video in your library</h1>
+          <p> Add to library using the save button</p>
         </div>
       )}
       {type === "subscribes" && (videos?.length === 0 || !videos) && (
         <div>
-          <h1>You didn`t subscripe any channel</h1>
+          <h1>You didn't subscribe to any channel</h1>
         </div>
       )}
     </Container>
