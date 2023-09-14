@@ -68,7 +68,6 @@ const SignIn = () => {
 
     const handleSignUp = async (e) => {
       e.preventDefault();
-      dispatch(loginStart());
       const email = signUpRef.current.email.value.trim();
       const userName = signUpRef.current.userName.value.trim();
       const password = signUpRef.current.password.value.trim();
@@ -86,10 +85,6 @@ const SignIn = () => {
         });
         setSignUpError({ email: "", password: "", userName: "" });
         signUpRef.current.reset();
-        localStorage.setItem("access-token", res.token);
-        dispatch(loginSuccess(res.data.user));
-        console.log("res", res);
-        console.log("res.token", res.token)
         navigate("/");
       } catch (error) {
         if (err.response.status === 409) {
