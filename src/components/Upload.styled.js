@@ -39,6 +39,7 @@ export const Input = styled.input`
     border-radius: 3px;
     padding: 10px;
     background-color: transparent;
+    z-index: 999;
 `;
 export const Desc = styled.textarea`
     border: 1px solid ${({theme})=> theme.soft};

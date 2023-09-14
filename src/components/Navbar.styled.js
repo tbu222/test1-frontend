@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     position: sticky; 
     top:0;
+    z-index: 1;
     background-colors: ${({theme})=> theme.bgLighter };
     height: 50px;
 `;
