@@ -40,13 +40,13 @@ const Menu = ({ lightTheme, setLightTheme }) => {
                         Home
                     </Item>
                 </Link>
-                <Link to="/trends" style={{ textDecoration: "none", color: "inherit" }}>
+                <Link to="/trend" style={{ textDecoration: "none", color: "inherit" }}>
                     <Item current={path ==="/trend"}>
                         <ExploreOutlinedIcon />
                         Trending
                     </Item>
                 </Link>
-                <Link to="/subscriptions" style={{ textDecoration: "none", color: "inherit" }}>
+                <Link to="/subscribes" style={{ textDecoration: "none", color: "inherit" }}>
                     <Item current={path === "/subscriptions"}>
                         <SubscriptionsOutlinedIcon />
                         Subscriptions
