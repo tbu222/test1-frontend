@@ -109,7 +109,7 @@ const Video = () => {
   const handleDislike = async (e) => {
     e.preventDefault();
     console.log(
-      currentUser?.subscripedChannels?.includes(currentVideo?.userId._id)
+      currentUser?.subscribedChannels?.includes(currentVideo?.userId._id)
     );
 
     !currentUser && navigate("/signin");
@@ -140,7 +140,7 @@ const Video = () => {
       dispatch(userSubscribeChannel(currentVideo?.userId._id));
       dispatch(
         subscribeChannel(
-          currentUser.subscripedChannels.includes(currentVideo?.userId._id)
+          currentUser.subscribedChannels.includes(currentVideo?.userId._id)
         )
       );
       await API.put(`users/subscribe/${currentVideo?.userId._id}`);
@@ -221,12 +221,12 @@ const Video = () => {
                 <ChannelDetail>
                   <ChannelName>{currentVideo?.userId.name}</ChannelName>
                   <ChannelCounter>
-                    {currentVideo?.userId.subscripers} subscribers
+                    {currentVideo?.userId.subscribers} subscribers
                   </ChannelCounter>
                 </ChannelDetail>
               </ChannelInfo>
               <Subscribe onClick={handleSubscribe}>
-                {currentUser?.subscripedChannels?.includes(
+                {currentUser?.subscribedChannels?.includes(
                   currentVideo?.userId?._id
                 )
                   ? "SUBSCRIBE"
