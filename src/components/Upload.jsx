@@ -51,8 +51,6 @@ const Upload = ({ setOpen }) => {
 
   const handleTags = (e) => {
     setTags(e.target.value.split(","));
-    console.log(currentUser);
-    console.log(tags);
   };
 
   const uploadFile = (file, urlType) => {
@@ -106,7 +104,6 @@ const Upload = ({ setOpen }) => {
       ...inputs,
       tags,
     });
-    console.log(res);
     setOpen(false);
     res.status === 200 && navigate(`/`);
   };
@@ -118,7 +115,7 @@ const Upload = ({ setOpen }) => {
         <Title>Upload a New Video</Title>
         <Label>Video:</Label>
         {videoPerc > 0 ? (
-          "Uploading:" + videoPerc
+          "Uploading:" + videoPerc + "%"
         ) : (
           <Input
             type="file"

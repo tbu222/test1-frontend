@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import API from "../../api/api.js";
 import Card from "../../components/Card.jsx";
-
 import { Container } from "./History.styled.js";
 
 const History = () => {

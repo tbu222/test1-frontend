@@ -10,7 +10,6 @@ import Video from "./pages/Video/Video.jsx";
 import SignIn from "./pages/SignIn/SignIn.jsx";
 import Search from './pages/Search/Search.jsx';
 import History from './pages/History/History.jsx';
-//ok
 function App() {
   const [lightTheme, setLightTheme]  = useState(true)
   return (

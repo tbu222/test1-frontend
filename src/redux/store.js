@@ -10,12 +10,8 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-
-
-// import slices
 import userReducer from "./userSlice";
 import videoReducer from "./videoSlice";
-
 
 const persistConfig = {
   key: 'user',

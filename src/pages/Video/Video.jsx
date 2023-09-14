@@ -46,7 +46,6 @@ import {
   fetchVideoFailure,
   likeVideo,
   dislikeVideo,
-  saveVideo,
   subscribeChannel,
 } from "../../redux/videoSlice.js";
 import {
@@ -175,7 +174,7 @@ const Video = () => {
                 <div>
                   {currentVideo
                     ? format(currentVideo.createdAt)
-                    : "Jun 22,2022"}
+                    : "Jan 1, 1111"}
                 </div>
               </Info>
               <Buttons>
@@ -230,8 +229,8 @@ const Video = () => {
                 {currentUser?.subscripedChannels?.includes(
                   currentVideo?.userId?._id
                 )
-                  ? "UN SUBSCRIBE"
-                  : "SUBSCRIBE"}
+                  ? "SUBSCRIBE"
+                  : "SUBSCRIBED"}
               </Subscribe>
             </Channel>
             <Hr />

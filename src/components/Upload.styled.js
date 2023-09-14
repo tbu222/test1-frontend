@@ -6,10 +6,10 @@ export const Container = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    background-color: #000000a7;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    gap: 24px;
 `;
 
 export const Wrapper = styled.div`
@@ -39,6 +39,7 @@ export const Input = styled.input`
     border-radius: 3px;
     padding: 10px;
     background-color: transparent;
+    z-index: 999;
 `;
 export const Desc = styled.textarea`
     border: 1px solid ${({theme})=> theme.soft};
