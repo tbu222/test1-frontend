@@ -67,7 +67,7 @@ const SignIn = () => {
 
     const handleSignUp = async (e) => {
       e.preventDefault();
-
+      dispatch(loginStart());
       const email = signUpRef.current.email.value.trim();
       const userName = signUpRef.current.userName.value.trim();
       const password = signUpRef.current.password.value.trim();
