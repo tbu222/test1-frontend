@@ -10,7 +10,7 @@ import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import LibraryAddOutlinedIcon from "@mui/icons-material/LibraryAddOutlined";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 
-import moment from "moment";
+import {format} from "timeago.js"
 import Comments from "../../components/Comments.jsx";
 import Card from "../../components/Card.jsx";
 import {
@@ -174,7 +174,7 @@ const Video = () => {
                 <div>{currentVideo ? currentVideo.views : 0} views • </div>
                 <div>
                   {currentVideo
-                    ? moment(currentVideo.createdAt).fromNow()
+                    ? format(currentVideo.createdAt)
                     : "Jun 22,2022"}
                 </div>
               </Info>

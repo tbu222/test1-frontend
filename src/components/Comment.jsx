@@ -7,7 +7,7 @@ import {
     Text,
     Button,
   } from "../styles/Comment.styled.js";
-  import moment from "moment";
+  import {format} from "timeago.js";
   
   import userAvatar from '../assets/avatar.jpg';
   
@@ -22,7 +22,7 @@ import {
         <Details>
           <Name>
             {data?.userId.name}
-            <Date>{moment(data?.createdAt).fromNow()}</Date>
+            <Date>{format(data?.createdAt)}</Date>
           </Name>
           <Text>
             {data?.desc}
