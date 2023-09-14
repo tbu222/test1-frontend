@@ -6,7 +6,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    position: relative;
     flex:5;
 `;
 export const VideoWrapper = styled.div``;
@@ -27,7 +26,6 @@ export const Details = styled.div`
 
 export const Info = styled.span`
     color: ${({theme})=> theme.textSoft };
-    display: flex;
 `;
 
 export const Buttons = styled.div`
