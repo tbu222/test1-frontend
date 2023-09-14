@@ -6,7 +6,7 @@ import {
     Date,
     Text,
     Button,
-  } from "../styles/Comment.styled.js";
+  } from "./Comment.styled.js";
   import {format} from "timeago.js";
   
   import userAvatar from '../assets/avatar.jpg';
@@ -29,7 +29,7 @@ import {
           </Text>
         </Details>
   
-        {isOwner && <Button onClick={(e)=> handleDelete(e, data._id)}> delete </Button>}
+        {isOwner && <Button onClick={(e)=> handleDelete(e, data._id)}> Delete </Button>}
       </Container>
     );
   };

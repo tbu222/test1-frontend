@@ -9,7 +9,7 @@ import {
   Title,
   ChannelName,
   Info,
-} from "../styles/Card.styled.js";
+} from "./Card.styled.js";
 
 import thumbnail from "../assets/thumbnail.jpg";
 

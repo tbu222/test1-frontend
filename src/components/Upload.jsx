@@ -17,7 +17,7 @@ import {
   Desc,
   Button,
   Label,
-} from "../styles/upload.styled.js";
+} from "./Upload.styled.js";
 import firebaseApp from "../firebase/firebase.js";
 import API from "../api/api.js";
 import { useSelector } from "react-redux";

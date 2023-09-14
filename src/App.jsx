@@ -2,8 +2,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { darkMode, lightMode } from "./utils/Theme";
-import GlobalStyle from "./styles/global.styled.js";
-import { Container, Main, Wrapper } from "./styles/app.styled.js";
+import { Container, Main, Wrapper } from "./App.styled.js";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home/Home.jsx";
@@ -17,7 +16,6 @@ function App() {
   return (
     <ThemeProvider theme={lightTheme ? lightMode : darkMode}>
       <Container>
-        <GlobalStyle />
         <BrowserRouter>
           <Menu lightTheme={lightTheme} setLightTheme={setLightTheme} />
           <Main>

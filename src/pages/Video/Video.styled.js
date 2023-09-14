@@ -1,118 +1,98 @@
 import styled from "styled-components";
-import { device } from "../../styles/global.styled.js";
-export const Container = styled.div`
-  display: flex;
-  gap: 24px;
 
-  @media ${device.laptop} {
-    flex-direction: column;
-    gap: 50px;
-  }
+export const Container = styled.div`
+    display:flex;
+    gap: 25px;
 `;
 
 export const Content = styled.div`
-  position: relative;
-  flex: 5;
+    flex:5;
 `;
 export const VideoWrapper = styled.div``;
 
 export const Title = styled.h1`
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: ${({ theme }) => theme.text};
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: ${({theme})=> theme.text };
 `;
 
 export const Details = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
 `;
 
 export const Info = styled.span`
-  color: ${({ theme }) => theme.textSoft};
-  display: flex;
-  gap: 10px;
+    color: ${({theme})=> theme.textSoft };
 `;
 
 export const Buttons = styled.div`
-  display: flex;
-  gap: 20px;
-  color: ${({ theme }) => theme.text};
+    display: flex;
+    gap: 15px;
+    color: ${({theme})=> theme.text };
 `;
 
 export const Button = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
+    display:flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
 `;
 
 export const Hr = styled.hr`
-  margin: 15px 0px;
-  border: 0.5px solid ${({ theme }) => theme.soft};
-
-  ${(props) =>
-    props.type &&
-    `
-    display: none;
-    @media ${device.tablet} {
-      display: block;
-    }
-  `}
+    border: 0.5px solid  ${({theme})=> theme.soft };
+    margin: 15px 0px;
 `;
 
 export const Recommendation = styled.div`
-  flex: 2;
+    flex: 2;
 `;
 export const Channel = styled.div`
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 `;
 
 export const ChannelInfo = styled.div`
-  display: flex;
-  gap: 20px;
+    display:flex;
+    gap:20px;
 `;
 
 export const Image = styled.img`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 `;
 
 export const ChannelDetail = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: ${({ theme }) => theme.text};
+    display:flex;
+    flex-direction: column;
+    color: ${({theme})=> theme.text};
 `;
 
 export const ChannelName = styled.span`
-  font-weight: 500;
+    font-weight: 500;
 `;
 
 export const ChannelCounter = styled.span`
-  margin-top: 5px;
-  margin-bottom: 20px;
-  color: ${({ theme }) => theme.textSoft};
-  font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: ${({theme})=> theme.textSoft};
+    font-size: 15px;
 `;
 
 export const Description = styled.p`
-  color: ${({ theme }) => theme.textSoft};
-  font-size: 14px;
-  margin-bottom: 15px;
+    font-size: 15px;
 `;
 
 export const Subscribe = styled.button`
-  background-color: #cc1a00;
-  font-weight: 500;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  height: max-content;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: 25%;
+    background-color: red;
+    font-weight: 500;
+    color: white;
+    border: None;
+    border-radius: 5px;
+    height: max-content;
+    padding: 10px 20px;
+    cursor: pointer;
 `;

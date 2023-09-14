@@ -6,7 +6,6 @@ import VideoLibraryOutlinedIcon from "@mui/icons-material/VideoLibraryOutlined";
 import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
-
 import logo from "../img/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector} from "react-redux";
@@ -19,7 +18,7 @@ import {
   Hr,
   Login,
   Button,
-} from "../styles/Menu.styled.js";
+} from "./Menu.styled.js";
 
 const Menu = ({ lightTheme, setLightTheme }) => {
     const {currentUser} = useSelector(state=> state.user)
@@ -69,7 +68,7 @@ const Menu = ({ lightTheme, setLightTheme }) => {
                 {!currentUser &&
                     <>
                         <Login>
-                            Sign in to like videos, comment, and subscribe.
+                            Sign in to experience full function
                             <Link to="signin" style={{ textDecoration: "none" }}>
                                 <Button>
                                     <AccountCircleOutlinedIcon />

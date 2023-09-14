@@ -3,7 +3,7 @@ import {
     NewComment,
     Avatar,
     Input,
-  } from "../styles/Comments.styled.js";
+  } from "./Comments.styled.js";
   
   import { useParams } from "react-router-dom";
   import { useEffect, useState } from "react";
@@ -34,14 +34,10 @@ import {
       e.preventDefault();
       const { value: commentValue } = e.target.comment;
       if (!commentValue) return;
-      console.log(localStorage.getItem("access-token"));
       try {
         const res = await API.post(`/comments/${videoId}`, {
           desc: commentValue,
         });
-  
-  
-        console.log("comment", res.data.comment);
         setComments((prev) => [res.data.comment, ...prev]);
         e.target.reset();
       } catch (error) {
@@ -66,7 +62,7 @@ import {
           <NewComment>
             <Avatar src={currentUser?.img || userAvatar} />
             <form onSubmit={handleAddComment}>
-              <Input name="comment" placeholder="Add a comment..." />
+              <Input name="comment" placeholder="Add your comment" />
             </form>
           </NewComment>
         )}

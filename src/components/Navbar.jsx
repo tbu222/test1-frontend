@@ -11,7 +11,7 @@ import {
   Input,
   Button,
   Avatar,
-} from "../styles/Navbar.styled.js";
+} from "./Navbar.styled.js";
 import { useState } from "react";
 import Upload from "../components/Upload.jsx";
 
@@ -21,7 +21,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isUploadOpen, setIsUploadOpen] = useState(false);
   const [query, setQuery] = useState("");
-
   const handleLogOut = (e) => {
     e.preventDefault();
     dispatch(logout());
@@ -34,9 +33,7 @@ const Navbar = () => {
   };
 
   const handleOpenSidebar = (e) => {
-    console.log("open sidebar");
     const bar = document.getElementById("mySidenav");
-    console.log(bar);
     if (bar.style.width === "250px") {
       bar.style.width = "0";
     } else {
