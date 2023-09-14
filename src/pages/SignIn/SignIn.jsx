@@ -11,7 +11,7 @@ import {
   Links,
   Link,
   Form,
-} from "./Singin.styled.js";
+} from "./SignIn.styled.js";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
