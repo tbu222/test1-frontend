@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { darkTheme, lightTheme } from "./utils/Theme";
+import { darkMode, lightMode } from "./utils/Theme";
 import GlobalStyle from "./styles/global.styled.js";
 import { Container, Main, Wrapper } from "./styles/app.styled.js";
 import Menu from "./components/Menu";
@@ -13,13 +13,13 @@ import Search from './pages/Search/Search.jsx';
 import History from './pages/History/History.jsx';
 //ok
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [lightTheme, setLightTheme]  = useState(true)
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={lightTheme ? lightMode : darkMode}>
       <Container>
         <GlobalStyle />
         <BrowserRouter>
-          <Menu darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Menu lightTheme={lightTheme} setLightTheme={setLightTheme} />
           <Main>
             <Navbar />
             <Wrapper>
