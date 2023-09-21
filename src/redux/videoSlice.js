@@ -7,7 +7,7 @@ const initialState = {
   isLiked: false,
   isDisliked: false,
   isSaved: false,
-  isSubscriped: false,
+  isSubscribed: false,
 };
 
 export const videoSlice = createSlice({
@@ -17,7 +17,6 @@ export const videoSlice = createSlice({
     fetchVideoStart: (state) => {
       state = { ...initialState };
       state.loading = true;
-      console.log(state);
     },
     fetchVideoSuccess: (state, action) => {
       state.loading = false;
@@ -43,9 +42,9 @@ export const videoSlice = createSlice({
     subscribeChannel: (state, action) => {
       console.log(action.payload);
       if (action.payload) {
-        state.currentVideo.userId.subscripers -= 1;
+        state.currentVideo.userId.subscribers -= 1;
       } else {
-        state.currentVideo.userId.subscripers += 1;
+        state.currentVideo.userId.subscribers += 1;
       }
     },
   },

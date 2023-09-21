@@ -61,15 +61,13 @@ export const userSlice = createSlice({
     },
     userSubscribeChannel: (state, action) => {
       if (!state.currentUser) return;
-      if (state.currentUser?.subscripedChannels?.includes(action.payload)) {
-        state.currentUser.subscripedChannels.splice(
-          state.currentUser.subscripedChannels.indexOf(action.payload),
+      if (state.currentUser?.subscribedChannels?.includes(action.payload)) {
+        state.currentUser.subscribedChannels.splice(
+          state.currentUser.subscribedChannels.indexOf(action.payload),
           1
         );
-        console.log("user un sub");
       } else {
-        state?.currentUser?.subscripedChannels?.push(action.payload);
-        console.log("user sub");
+        state?.currentUser?.subscribedChannels?.push(action.payload);
       }
     },
   },
